@@ -1,0 +1,22 @@
+Plans for this project:
+
+- Adding a Front End, even if it's just a basic html file being served up after the data is scraped, that would be cool
+
+
+Notes exported from the app.py:
+# Moving forward:
+#  Build an array using the values that we extract
+#  Deliver that array to a Vue Interface to modify the display
+#  Store scraped data in a database
+#  
+# Remember 
+#  dont go overboard on my calls! No more than 1 a second! :U
+#  Only scrape from sites that allow their data to be scraped in their terms 
+
+# Documentation:
+# https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find-all
+
+# Look into a scraping framework like Scrapy!
+# https://doc.scrapy.org/en/1.5/intro/overview.html
+
+#toscrape.com is a really good resource for learning scraping!

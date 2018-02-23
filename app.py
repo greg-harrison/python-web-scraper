@@ -1,25 +1,14 @@
-from urllib.request import urlopen
+import requests
 from bs4 import BeautifulSoup
+from user_agent import generate_user_agent
 
-# Moving forward:
-#  Build an array using the values that we extract
-#  Deliver that array to a Vue Interface to modify the display
-#  Store scraped data in a database
-#  
-# Remember 
-#  dont go overboard on my calls! No more than 1 a second! :U
-#  Only scrape from sites that allow their data to be scraped in their terms 
+# https://hackernoon.com/web-scraping-tutorial-with-python-tips-and-tricks-db070e70e071
 
-# Documentation:
-# https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find-all
-
-# Look into a scraping framework like Scrapy!
-# https://doc.scrapy.org/en/1.5/intro/overview.html
-
-#toscrape.com is a really good resource for learning scraping!
 page_url = "http://quotes.toscrape.com/tag/inspirational/"
 
-page = urlopen(page_url)
+headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
+
+page = requests.get(page_url, timeout=5, headers)
 
 soup = BeautifulSoup(page, 'html.parser')
 
