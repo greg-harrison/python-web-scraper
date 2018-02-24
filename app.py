@@ -8,9 +8,9 @@ page_url = "http://quotes.toscrape.com/tag/inspirational/"
 
 headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
 
-page = requests.get(page_url, timeout=5, headers)
+page = requests.get(page_url, timeout=5, headers=headers)
 
-soup = BeautifulSoup(page, 'html.parser')
+soup = BeautifulSoup(page.content, 'html.parser')
 
 quoteArray = []
 quotes = soup.find_all('span', attrs={'class': 'text'})
