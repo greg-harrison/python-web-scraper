@@ -1,4 +1,5 @@
 import requests
+import Flask
 from bs4 import BeautifulSoup
 from user_agent import generate_user_agent
 
@@ -6,7 +7,8 @@ from user_agent import generate_user_agent
 
 page_url = "http://quotes.toscrape.com/tag/inspirational/"
 
-headers = {'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
+headers = {
+    'User-Agent': generate_user_agent(device_type="desktop", os=('mac', 'linux'))}
 
 page = requests.get(page_url, timeout=5, headers=headers)
 
