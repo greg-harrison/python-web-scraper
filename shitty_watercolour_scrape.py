@@ -15,6 +15,6 @@ commentArray = []
 comments = soup.find_all('div', attrs={'class': 'CommentListing__comment'})
 
 for x in comments:
-    commentArray.append(x.text)
+    commentArray.append(x.find('a')['href'])
 
 print(commentArray)
