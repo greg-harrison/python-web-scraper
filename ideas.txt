@@ -2,7 +2,13 @@ Plans for this project:
 
 - Adding a Front End, even if it's just a basic html file being served up after the data is scraped, that would be cool
 
-- Next step: Setting up another project that will be used to make requests against
+- Set up another project that will be used to make requests against
+
+
+
+-- Make a script that pulls the latest comments from u/shitty_watercolour and then displays them on a page
+
+
 
 Notes exported from the app.py:
 # Moving forward:
